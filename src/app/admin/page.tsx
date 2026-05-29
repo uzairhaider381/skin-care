@@ -12,7 +12,7 @@ import { isSupabaseConfigured } from '@/lib/supabase';
 import { ThemeProvider, useTheme } from '@/components/ThemeProvider';
 
 function DashboardContent() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   
   // Auth state
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);

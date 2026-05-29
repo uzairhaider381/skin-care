@@ -11,5 +11,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 }
 
 export function useTheme() {
-  return nextUseTheme();
+  const { theme, setTheme, systemTheme, resolvedTheme } = nextUseTheme();
+  const toggleTheme = () => {
+    // Switch between light and dark themes; fallback to 'light' if undefined
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+  };
+  return { theme, setTheme, systemTheme, resolvedTheme, toggleTheme };
 }
