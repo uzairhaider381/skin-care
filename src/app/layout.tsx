@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import { ThemeProvider } from '@/components/ThemeProvider';
 import BookingModal from '@/components/BookingModal';
 
 // Mobile viewport for responsive design
@@ -50,7 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col"><ThemeProvider>{children}</ThemeProvider>      </body>
+      <body className="min-h-full flex flex-col"><ThemeProvider>{children}</ThemeProvider><BookingModal /></body>
     </html>
   );
 }
