@@ -1,4 +1,6 @@
-import Navbar from "@/components/Navbar";
+import BookingModal from '@/components/BookingModal';
+
+export default function Home() {
 import Hero from "@/components/Hero";
 import AboutDoctor from "@/components/AboutDoctor";
 import Services from "@/components/Services";
