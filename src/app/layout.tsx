@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
 
+// Mobile viewport for responsive design
+export const viewport = { width: 'device-width', initialScale: 1, maximumScale: 5 };
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -47,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col"><ThemeProvider>{children}</ThemeProvider></body>
+      <body className="min-h-full flex flex-col"><ThemeProvider>{children}</ThemeProvider>      </body>
     </html>
   );
 }
