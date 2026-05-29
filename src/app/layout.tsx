@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-export const viewport = { width: 'device-width', initialScale: 1, maximumScale: 5 };
+
 export const metadata: Metadata = {
   title: 'Luxe Skin & Dermatology Clinic | Advanced Aesthetic Skincare',
   description: 'Welcome to Luxe Skin & Dermatology Clinic. Dr. Sarah Ahmed offers state-of-the-art medical dermatology, clinical peels, laser therapy, and anti-aging treatments for healthy, glowing skin.',
